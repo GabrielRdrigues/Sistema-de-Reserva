@@ -1,0 +1,42 @@
+.search-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.btn-busca {
+    background-color: var(--cor-laranja);
+    color: white;
+    font-weight: bold;
+}
+
+.btn-busca:hover {
+    background-color: var(--cor-marrom);
+    color: white;
+}
+
+.reserva-card {
+    background: white;
+    border-left: 5px solid #28a745; /* Verde para confirmado */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.status-confirmed {
+    background-color: #d4edda;
+    color: #155724;
+}

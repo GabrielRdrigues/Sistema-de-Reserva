@@ -1,19 +1,19 @@
-.minha-navbar {
-    border-bottom: 1px solid #000;
-    padding-top: 20px;
-    padding-bottom: 20px;
+/* --- Importando Fontes --- */
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* --- Variáveis Globais (Cores do Restaurante) --- */
+:root {
+    --cor-laranja: #d35400; /* Cor destaque */
+    --cor-marrom: #3e2723;  /* Cor base/texto escuro */
+    --cor-bg-suave: #fff3e0;
+    --cor-branco: #ffffff;
 }
 
-.navbar-nav .nav-link {
-    color: #000 !important; /* Força a cor preta pura (Bootstrap usa cinza por padrão) */
-    text-transform: uppercase; 
-    font-size: 14px; /* Tamanho da fonte mais elegante */
-    letter-spacing: 1px; /* Espaçamento entre as letras */
-    font-weight: 500; /* Espessura da fonte */
-    margin-left: 15px; /* Espaço entre os itens */
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o footer fique embaixo mesmo com pouco conteúdo */
+    background-color: #f8f9fa;
 }
 
-/* Efeito quando passa o mouse em cima */
-.nav-item:hover {
-    text-decoration: underline; /* Sublinha ao passar o mouse */
-}
