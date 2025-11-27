@@ -1,37 +1,3 @@
-/* --- Identidade Visual --- */
-:root {
-    --cor-laranja: #d35400;
-    --cor-marrom: #3e2723;
-    --cor-bg-suave: #fff3e0;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    color: #333;
-    /* Mudei levemente o fundo para destacar a caixa branca do formulário */
-    background-color: #f8f9fa; 
-}
-
-/* --- Navbar (Estilos mantidos) --- */
-.minha-navbar {
-    border-bottom: 1px solid #000;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.navbar-nav .nav-link {
-    color: #000 !important;
-    text-transform: uppercase; 
-    font-size: 14px;
-    letter-spacing: 1px;
-    font-weight: 500;
-    margin-left: 15px;
-}
-
-.nav-item:hover {
-    text-decoration: underline;
-}
-
 /* --- Estilização do Formulário --- */
 .reservation-box {
     background-color: white;
@@ -39,8 +5,8 @@ body {
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border-top: 5px solid var(--cor-laranja);
-    margin-top: 80px;    /* Empurra o formulário para baixo (desgruda do header) */
-    margin-bottom: 80px; /* Empurra o rodapé para baixo (desgruda do footer) */
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .form-control {
@@ -70,26 +36,4 @@ body {
     background-color: var(--cor-marrom);
     color: white;
     transform: translateY(-2px);
-}
-
-.section-title {
-    color: var(--cor-marrom);
-    font-weight: 700;
-    margin-bottom: 30px;
-    text-align: center;
-    font-family: 'Rye', serif;
-}
-
-/* --- Rodapé --- */
-footer {
-    background-color: var(--cor-marrom);
-    color: white;
-    padding: 40px 0 20px 0;
-    /* Removemos a margem top aqui pois já colocamos na reservation-box */
-    margin-top: 0; 
-}
-
-footer h5 {
-    color: var(--cor-laranja);
-    font-family: 'Rye', serif;
 }

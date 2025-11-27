@@ -1,0 +1,47 @@
+/* --- Elementos da Página Sobre Nós --- */
+
+.text-highlight {
+    color: var(--cor-laranja);
+    font-weight: bold;
+}
+
+.img-historia {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+    max-width: 100%;
+    height: auto;
+}
+
+.img-historia:hover {
+    transform: scale(1.02);
+}
+
+/* Cards de Diferenciais */
+.features-section {
+    background-color: var(--cor-bg-suave);
+    padding: 60px 0;
+    margin-top: 60px;
+}
+
+.feature-box {
+    text-align: center;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    height: 100%;
+    border-bottom: 4px solid var(--cor-laranja);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--cor-laranja);
+    margin-bottom: 20px;
+}
+
+.feature-title {
+    color: var(--cor-marrom);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
