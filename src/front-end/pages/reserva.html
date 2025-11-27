@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservas - Na Chapa Restaurante</title>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../assets/css/index.css">
+    <link rel="stylesheet" href="../assets/css/reserva.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+   <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white minha-navbar">
+        
+        <a class="navbar-brand text-dark" href="index.html">
+            <img class="rounded-circle mr-2" src="../assets/img/logo.png" width="80" height="80">
+            NA CHAPA RESTAURANTE
+        </a>
+
+        <div class="collapse navbar-collapse" id="navbar-nav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="cardapio.html">Cardápio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="reserva.html">Reserve aqui</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sobre.html">Quem somos</a>
+                </li>
+            </ul>
+        </div>
+
+    </nav>          
+</header>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="reservation-box">
+                <h2 class="section-title">Dados da Reserva</h2>
+                
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nome">Nome Completo</label>
+                            <input type="text" class="form-control" id="nome" placeholder="Ex: João da Silva" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="telefone">Telefone / WhatsApp</label>
+                            <input type="tel" class="form-control" id="telefone" placeholder="(XX) 99999-9999" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="data">Data</label>
+                            <input type="date" class="form-control" id="data" required>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="hora">Horário</label>
+                            <select id="hora" class="form-control" required>
+                                <option selected>Escolher...</option>
+                                <option>11:30</option>
+                                <option>12:00</option>
+                                <option>12:30</option>
+                                <option>13:00</option>
+                                <option>19:00</option>
+                                <option>19:30</option>
+                                <option>20:00</option>
+                                <option>20:30</option>
+                                <option>21:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="pessoas">Nº de Pessoas</label>
+                            <input type="number" class="form-control" id="pessoas" min="1" max="20" value="2" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="obs">Observações Especiais (Opcional)</label>
+                        <textarea class="form-control" id="obs" rows="3" placeholder="Ex: Preciso de cadeirinha para bebê, aniversário..."></textarea>
+                    </div>
+
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="checkConfirm" required>
+                        <label class="form-check-label small text-muted" for="checkConfirm">
+                            Concordo que a reserva tem tolerância de atraso de 15 minutos.
+                        </label>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button type="submit" class="btn btn-reserva btn-block">
+                            <i class="far fa-calendar-check mr-2"></i> Confirmar Reserva
+                        </button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <h5>NA CHAPA</h5>
+                <p>Restaurante & Grelhados</p>
+                <small>© 2024 Todos os direitos reservados.</small>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Horários</h5>
+                <p class="mb-1">Ter - Sex: 11h às 23h</p>
+                <p class="mb-1">Sáb - Dom: 12h às 00h</p>
+                <p>Seg: Fechado</p>
+            </div>
+            <div class="col-md-4 mb-3">
+                <h5>Contato</h5>
+                <p class="mb-1"><i class="fas fa-phone mr-2"></i> (11) 99999-9999</p>
+                <p><i class="fas fa-map-marker-alt mr-2"></i> Rua do Sabor, 123 - Centro</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+</body>
+</html>

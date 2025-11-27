@@ -1,0 +1,109 @@
+/* --- Identidade Visual --- */
+:root {
+    --cor-laranja: #d35400;
+    --cor-marrom: #3e2723;
+    --cor-bg-suave: #fff3e0;
+    --cor-preco: #c0392b;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fdfdfd;
+}
+
+/* --- Header da Página (Hero Section) --- */
+.page-header {
+    /* Imagem de fundo de uma mesa farta ou grelha */
+    background: linear-gradient(rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0.8)), url('https://images.unsplash.com/photo-1544025162-d76690b6d015?q=80&w=1920&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.page-header h1 {
+    font-family: 'Rye', serif;
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+/* --- Títulos das Categorias --- */
+.category-title {
+    font-family: 'Rye', serif;
+    color: var(--cor-marrom);
+    border-left: 5px solid var(--cor-laranja);
+    padding-left: 15px;
+    margin: 40px 0 30px 0;
+}
+
+/* --- Card do Prato --- */
+.menu-card {
+    border: none;
+    border-radius: 15px;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Para a imagem não sair da borda redonda */
+    height: 100%; /* Garante que todos cards tenham mesma altura */
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover; /* Corta a imagem para caber sem distorcer */
+}
+
+.card-body {
+    padding: 20px;
+    flex-grow: 1; /* Empurra o preço para o fundo */
+}
+
+.card-title {
+    font-weight: 700;
+    color: var(--cor-marrom);
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* --- Preço --- */
+.price-tag {
+    background-color: var(--cor-bg-suave);
+    color: var(--cor-laranja);
+    font-weight: 700;
+    font-size: 1.2rem;
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-value {
+    font-family: 'Rye', serif;
+    font-size: 1.4rem;
+}
+
+/* --- Rodapé --- */
+footer {
+    background-color: var(--cor-marrom);
+    color: white;
+    padding: 40px 0 20px 0;
+    margin-top: 80px;
+}
+
+footer h5 {
+    color: var(--cor-laranja);
+    font-family: 'Rye', serif;
+}
