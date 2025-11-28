@@ -7,13 +7,13 @@
 }
 
 .btn-busca {
-    background-color: var(--cor-laranja);
+    background-color: #d35400;
     color: white;
     font-weight: bold;
 }
 
 .btn-busca:hover {
-    background-color: var(--cor-marrom);
+    background-color: #3e2723;
     color: white;
 }
 

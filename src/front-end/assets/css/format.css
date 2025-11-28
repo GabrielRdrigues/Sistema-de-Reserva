@@ -1,15 +1,6 @@
 /* --- Importação de Fontes --- */
 @import url('https://fonts.googleapis.com/css2?family=Rye&family=Roboto:wght@300;400;500;700&display=swap');
 
-/* --- Variáveis Globais --- */
-:root {
-    --cor-laranja: #d35400;
-    --cor-marrom: #3e2723;
-    --cor-bg-suave: #fff3e0;
-    --cor-branco: #ffffff;
-    --cor-preco: #c0392b;
-}
-
 /* --- Reset e Base --- */
 body {
     font-family: 'Roboto', sans-serif;
@@ -26,25 +17,25 @@ ul { list-style: none; padding: 0; margin: 0; }
 /* --- Navbar Padronizada --- */
 .minha-navbar {
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    background-color: var(--cor-branco) !important;
+    background-color: #ffffff;
     padding: 10px 0;
 }
 
 .navbar-brand {
     font-family: 'Rye', serif;
-    color: var(--cor-marrom) !important;
+    color: #3e2723;
     font-size: 1.4rem;
     display: flex;
     align-items: center;
 }
 
 .navbar-brand img {
-    border: 2px solid var(--cor-laranja);
+    border: 2px solid #d35400;
     padding: 2px;
 }
 
 .navbar-nav .nav-link {
-    color: #555 !important;
+    color: #555;
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 1px;
@@ -55,12 +46,12 @@ ul { list-style: none; padding: 0; margin: 0; }
 
 .navbar-nav .nav-item.active .nav-link,
 .navbar-nav .nav-item:hover .nav-link {
-    color: var(--cor-laranja) !important;
+    color: #d35400;
 }
 
 /* --- Page Header (Cabeçalho Padrão das sub-páginas) --- */
 .page-header {
-    background-color: var(--cor-marrom);
+    background-color: #3e2723;
     background-size: cover;
     background-position: center;
     color: white;
@@ -96,7 +87,7 @@ ul { list-style: none; padding: 0; margin: 0; }
 
 /* --- Títulos de Seção --- */
 .section-title {
-    color: var(--cor-marrom);
+    color: #3e2723;
     font-weight: 700;
     margin-bottom: 20px;
     position: relative;
@@ -109,20 +100,20 @@ ul { list-style: none; padding: 0; margin: 0; }
     display: block;
     width: 50px;
     height: 3px;
-    background: var(--cor-laranja);
+    background: #d35400;
     margin-top: 10px;
 }
 
 /* --- Rodapé Padronizado --- */
 footer {
-    background-color: var(--cor-marrom);
+    background-color: #3e2723;
     color: white;
     padding: 40px 0 20px 0;
     margin-top: auto;
 }
 
 footer h5 {
-    color: var(--cor-laranja);
+    color: #d35400;
     font-family: 'Rye', serif;
     margin-bottom: 20px;
 }
@@ -133,5 +124,5 @@ footer p, footer small {
 }
 
 footer i {
-    color: var(--cor-laranja);
+    color:#d35400;
 }
