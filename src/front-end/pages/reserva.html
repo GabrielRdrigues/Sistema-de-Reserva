@@ -55,62 +55,69 @@
             <div class="reservation-box">
                 <h2 class="section-title">Dados da Reserva</h2>
                 
-                <form>
+                <form action="../../back-end/salvar_reserva.php" method="POST">
+    
                     <div class="form-row">
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-5">
                             <label for="nome">Nome Completo</label>
-                            <input type="text" class="form-control" id="nome" placeholder="Ex: João da Silva" required>
+                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Ex: João da Silva" required>
                         </div>
-                        <div class="form-group col-md-6">
+    
+                        <div class="form-group col-md-3">
+                            <label for="cpf">CPF</label>
+                            <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                        </div>
+
+                        <div class="form-group col-md-4">
                             <label for="telefone">Telefone / WhatsApp</label>
-                            <input type="tel" class="form-control" id="telefone" placeholder="(XX) 99999-9999" required>
+                            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(XX) 99999-9999" required>
                         </div>
                     </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label for="data">Data</label>
-                            <input type="date" class="form-control" id="data" required>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="hora">Horário</label>
-                            <select id="hora" class="form-control" required>
-                                <option selected>Escolher...</option>
-                                <option>11:30</option>
-                                <option>12:00</option>
-                                <option>12:30</option>
-                                <option>13:00</option>
-                                <option>19:00</option>
-                                <option>19:30</option>
-                                <option>20:00</option>
-                                <option>20:30</option>
-                                <option>21:00</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="pessoas">Nº de Pessoas</label>
-                            <input type="number" class="form-control" id="pessoas" min="1" max="20" value="2" required>
-                        </div>
+                             <label for="data">Data</label>
+                             <input type="date" class="form-control" id="data" name="data" required>
+                         </div>
+                     <div class="form-group col-md-4">
+                        <label for="hora">Horário</label>
+                        <select id="hora" name="hora" class="form-control" required>
+                            <option selected value="">Escolher...</option>
+                            <option>11:30</option>
+                            <option>12:00</option>
+                            <option>12:30</option>
+                            <option>13:00</option>
+                            <option>19:00</option>
+                            <option>19:30</option>
+                            <option>20:00</option>
+                            <option>20:30</option>
+                            <option>21:00</option>
+                        </select>
                     </div>
+                    <div class="form-group col-md-4">
+                        <label for="pessoas">Nº de Pessoas</label>
+                        <input type="number" class="form-control" id="pessoas" name="pessoas" min="1" max="20" value="2" required>
+                    </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="obs">Observações Especiais (Opcional)</label>
-                        <textarea class="form-control" id="obs" rows="3" placeholder="Ex: Preciso de cadeirinha para bebê, aniversário..."></textarea>
-                    </div>
+                <div class="form-group">
+                    <label for="obs">Observações Especiais (Opcional)</label>
+                    <textarea class="form-control" id="obs" name="obs" rows="3" placeholder="Ex: Preciso de cadeirinha para bebê, aniversário..."></textarea>
+                </div>
 
-                    <div class="form-group form-check">
-                        <input type="checkbox" class="form-check-input" id="checkConfirm" required>
-                        <label class="form-check-label small text-muted" for="checkConfirm">
-                            Concordo que a reserva tem tolerância de atraso de 15 minutos.
-                        </label>
-                    </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="checkConfirm" required>
+                    <label class="form-check-label small text-muted" for="checkConfirm">
+                        Concordo que a reserva tem tolerância de atraso de 15 minutos.
+                    </label>
+                </div>
 
-                    <div class="text-center mt-4">
-                        <button type="submit" class="btn btn-reserva btn-block">
-                            <i class="far fa-calendar-check mr-2"></i> Confirmar Reserva
-                        </button>
-                    </div>
-                </form>
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-reserva btn-block">
+                        <i class="far fa-calendar-check mr-2"></i> Confirmar Reserva
+                    </button>
+                </div>
+            </form>
 
             </div>
         </div>
@@ -142,6 +149,23 @@
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+    // Função para ler parâmetros da URL (ex: ?erro=lotado)
+    const urlParams = new URLSearchParams(window.location.search);
+    const erro = urlParams.get('erro');
+    const restam = urlParams.get('restam');
+
+    if (erro === 'lotado') {
+        let msg = "Desculpe, este horário atingiu a capacidade máxima!";
+        if (restam && restam > 0) {
+            msg += "\nRestam apenas " + restam + " lugares.";
+        } else {
+            msg += "\nNão há mais lugares disponíveis.";
+        }
+        alert(msg);
+    }
+</script>
 
 </body>
 </html>
