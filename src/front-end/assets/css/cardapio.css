@@ -1,8 +1,8 @@
 /* --- Títulos das Categorias --- */
 .category-title {
     font-family: 'Rye', serif;
-    color: var(--cor-marrom);
-    border-left: 5px solid var(--cor-laranja);
+    color: #3e2723;
+    border-left: 5px solid #d35400;
     padding-left: 15px;
     margin: 40px 0 30px 0;
 }
@@ -37,7 +37,7 @@
 
 .card-title {
     font-weight: 700;
-    color: var(--cor-marrom);
+    color: #3e2723;
     margin-bottom: 10px;
 }
 
@@ -48,8 +48,8 @@
 
 /* --- Preço --- */
 .price-tag {
-    background-color: var(--cor-bg-suave);
-    color: var(--cor-laranja);
+    background-color: #fff3e0;
+    color: #d35400;
     font-weight: 700;
     font-size: 1.2rem;
     padding: 15px 20px;

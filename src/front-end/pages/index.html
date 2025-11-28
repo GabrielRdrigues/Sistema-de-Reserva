@@ -11,18 +11,23 @@
     
     <style>
         /* Estilo específico apenas da Home */
-        .hero-section {
+        .area-principal {
+            /*Colocando um filtro escuro por cima da imagem que a gente carregou*/
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../assets/img/img1.avif');
+            /*Vai cobrir toda área da div*/
             background-size: cover;
             background-position: center;
             height: 80vh;
+            /*vamos utilizar flexbox, o container vai ser flexivel fazendo com que
+            o conteúdo fique centralizado (verticalmente => align e horizontalmente => justify)*/
             display: flex;
             align-items: center;
             justify-content: center;
+            /*cor do texto*/
             color: white;
             text-align: center;
         }
-        .hero-title {
+        .titulo-area-principal {
             font-family: 'Rye', serif;
             font-size: 4rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
@@ -54,17 +59,27 @@
     </nav>          
 </header>
 
-<section class="hero-section">
+<!-- https://getbootstrap.com/docs/4.0/components/buttons/ fg => fancy larger -->
+<section class="area-principal">
     <div class="container">
-        <h1 class="hero-title">O Verdadeiro Sabor <br>da Carne</h1>
+        <h1 class="titulo-area-principal">O Verdadeiro Sabor <br>da Carne</h1>
         <p class="lead mb-4">Tradição, cortes nobres e ambiente familiar.</p>
-        <a href="reserva.html" class="btn btn-lg" style="background-color: var(--cor-laranja); color: white;">Faça sua Reserva</a>
+        <a href="reserva.html" class="btn btn-lg" style="background-color: #d35400; color: white;">Faça sua Reserva</a>
     </div>
 </section>
 
 <footer>
     <div class="container">
         <div class="row">
+            <!--
+            col: Indica que é uma coluna.
+            md: Significa Medium. A regra de colunas só se aplica a telas médias (laptops) para cima. 
+            Em celulares (telas pequenas), as colunas vão empilhar uma em cima da outra automaticamente (responsividade).
+            4: O tamanho da coluna. 
+            Como a linha tem 12 espaços no total e você usou 3 blocos de tamanho 4 (4 + 4 + 4 = 12), 
+            você terá 3 colunas de larguras iguais lado a lado.
+            mb-3: Margin Bottom 3.
+            -->
             <div class="col-md-4 mb-3">
                 <h5>NA CHAPA</h5>
                 <p>Restaurante & Grelhados</p>

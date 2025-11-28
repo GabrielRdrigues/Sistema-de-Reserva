@@ -4,7 +4,7 @@
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    border-top: 5px solid var(--cor-laranja);
+    border-top: 5px solid #d35400;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -21,7 +21,7 @@
 }
 
 .btn-reserva {
-    background-color: var(--cor-laranja);
+    background-color: #d35400;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -33,7 +33,7 @@
 }
 
 .btn-reserva:hover {
-    background-color: var(--cor-marrom);
+    background-color: #3e2723;
     color: white;
     transform: translateY(-2px);
 }
