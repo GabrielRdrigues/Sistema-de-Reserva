@@ -1,0 +1,137 @@
+/* --- Importação de Fontes --- */
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* --- Variáveis Globais --- */
+:root {
+    --cor-laranja: #d35400;
+    --cor-marrom: #3e2723;
+    --cor-bg-suave: #fff3e0;
+    --cor-branco: #ffffff;
+    --cor-preco: #c0392b;
+}
+
+/* --- Reset e Base --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o footer fique no final */
+}
+
+a { text-decoration: none; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+/* --- Navbar Padronizada --- */
+.minha-navbar {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    background-color: var(--cor-branco) !important;
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-family: 'Rye', serif;
+    color: var(--cor-marrom) !important;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    border: 2px solid var(--cor-laranja);
+    padding: 2px;
+}
+
+.navbar-nav .nav-link {
+    color: #555 !important;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item:hover .nav-link {
+    color: var(--cor-laranja) !important;
+}
+
+/* --- Page Header (Cabeçalho Padrão das sub-páginas) --- */
+.page-header {
+    background-color: var(--cor-marrom);
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.page-header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(62, 39, 35, 0.7); /* Máscara escura */
+    z-index: 1;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h1 {
+    font-family: 'Rye', serif;
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* --- Títulos de Seção --- */
+.section-title {
+    color: var(--cor-marrom);
+    font-weight: 700;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    font-family: 'Rye', serif;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--cor-laranja);
+    margin-top: 10px;
+}
+
+/* --- Rodapé Padronizado --- */
+footer {
+    background-color: var(--cor-marrom);
+    color: white;
+    padding: 40px 0 20px 0;
+    margin-top: auto;
+}
+
+footer h5 {
+    color: var(--cor-laranja);
+    font-family: 'Rye', serif;
+    margin-bottom: 20px;
+}
+
+footer p, footer small {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 300;
+}
+
+footer i {
+    color: var(--cor-laranja);
+}

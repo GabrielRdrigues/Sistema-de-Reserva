@@ -1,53 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quem Somos - Na Chapa Restaurante</title>
     
-    <!-- Bootstrap 4.6.2 (Mesmo do seu index) -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" xintegrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    
-    <!-- FontAwesome para ícones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-    <!-- Google Fonts (Sugestão para dar um ar mais 'Rústico/Grill') -->
-    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/sobre.css">
+    <link rel="stylesheet" href="../assets/css/format.css">
 
     <style>
-        /* --- Variáveis de Cor baseadas na Logo --- */
-        :root {
-            --cor-laranja: #d35400; /* Tom de fogo/grelhado */
-            --cor-marrom: #3e2723;  /* Tom escuro da chapa/carne */
-            --cor-bg-suave: #fff3e0; /* Fundo creme suave */
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            color: #333;
-            background-color: #fdfdfd;
-        }
-
-        /* --- Navbar Customizada (Mantendo a estrutura do seu index) --- */
-        .minha-navbar {
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .navbar-brand {
-            font-family: 'Rye', serif; /* Fonte estilo faroeste/grill */
-            color: var(--cor-marrom) !important;
-            font-size: 1.5rem;
-        }
-        .nav-link {
-            color: #555 !important;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        .nav-link:hover, .nav-item.active .nav-link {
-            color: var(--cor-laranja) !important;
-        }
-
-        /* --- Seção Hero (Topo) --- */
+        /* --- Estilos Específicos da Página Sobre --- */
+        
+        /* Seção Hero (Topo) Específica desta página */
         .page-header {
             background: linear-gradient(rgba(62, 39, 35, 0.8), rgba(62, 39, 35, 0.8)), url('https://images.unsplash.com/photo-1544025162-d76690b6d015?q=80&w=1920&auto=format&fit=crop');
             background-size: cover;
@@ -126,35 +92,18 @@
             font-weight: 700;
             font-size: 1.2rem;
         }
-
-        /* --- Rodapé --- */
-        footer {
-            background-color: var(--cor-marrom);
-            color: white;
-            padding: 40px 0 20px 0;
-            margin-top: 0;
-        }
-        footer h5 {
-            color: var(--cor-laranja);
-            font-family: 'Rye', serif;
-        }
-        footer p {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
+        
+        /* Obs: Navbar e Footer agora usam estilos do index.css */
     </style>
 </head>
 
 <body>
     
    <header>
-    <!-- Navbar mantendo a estrutura original -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white minha-navbar sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light minha-navbar sticky-top">
         <div class="container">
-            <a class="navbar-brand text-dark" href="index.html">
-                <!-- Se a imagem não carregar, mostra um ícone de fogo como fallback -->
-                <img class="rounded-circle mr-2" src="../assets/img/logo.png" width="80" height="80">
-                
+            <a class="navbar-brand" href="index.html">
+                <img class="rounded-circle mr-2" src="../assets/img/logo.png" width="60" height="60">
                 NA CHAPA
             </a>
 
@@ -171,10 +120,13 @@
                       <a class="nav-link" href="cardapio.html">Cardápio</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="reserva.html">Reserve aqui</a>
+                      <a class="nav-link" href="reserva.html">Reservar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="consulta.html">Minhas Reservas</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Quem somos</a>
+                        <a class="nav-link" href="sobre.html">Quem somos</a>
                     </li>
                 </ul>
             </div>
@@ -182,7 +134,6 @@
     </nav>          
 </header>
 
-<!-- Header da Página -->
 <section class="page-header">
     <div class="container">
         <h1>Nossa História</h1>
@@ -190,11 +141,9 @@
     </div>
 </section>
 
-<!-- Conteúdo Principal -->
 <div class="container">
     <div class="row align-items-center">
         <div class="col-lg-6 mb-4">
-            <!-- Espaço para uma foto do restaurante ou da equipe -->
             <img src="../assets/img/img1.avif" alt="Interior do Restaurante Na Chapa" class="img-historia">
         </div>
         <div class="col-lg-6">
@@ -209,13 +158,12 @@
                 Não servimos apenas refeições; servimos experiências. Seja um almoço rápido durante a semana ou um jantar especial com a família, no <strong>Na Chapa</strong> você sempre encontrará pratos feitos com carinho e expertise.
             </p>
             <div class="mt-4">
-                <a href="#" class="btn btn-outline-danger btn-lg" style="border-color: var(--cor-laranja); color: var(--cor-laranja);">Ver Cardápio</a>
+                <a href="cardapio.html" class="btn btn-outline-danger btn-lg" style="border-color: var(--cor-laranja); color: var(--cor-laranja);">Ver Cardápio</a>
             </div>
         </div>
     </div>
 </div>
 
-<!-- Seção de Diferenciais -->
 <section class="features-section">
     <div class="container">
         <div class="row">
@@ -249,7 +197,6 @@
     </div>
 </section>
 
-<!-- Rodapé Simples -->
 <footer>
     <div class="container">
         <div class="row">
@@ -273,10 +220,8 @@
     </div>
 </footer>
 
-<!-- Scripts do Bootstrap (Mesmos do seu index) -->
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" xintegrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" xintegrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" xintegrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
